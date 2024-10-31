@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Itinerary Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="itinerary-page">
+
+    <!-- Start of the itinerary container -->
+    <div class="itinerary-container">
+        <h1 class="app-title">My Itineraries</h1>
+        
+        <!-- Input and search fields, itinerary list, and other content go here -->
+        <div class="input-group">
+            <input type="text" id="itinerary-input" class="input-box" placeholder="Add Itinerary">
+            <select id="category-select" class="select-box">
+                <option value="Adventure">Adventure</option>
+                <option value="Relaxation">Relaxation</option>
+                <option value="Business">Business</option>
+            </select>
+            <button onclick="addItinerary()" class="btn">Add</button>
+        </div>
+
+        <input type="text" id="search-bar" class="search-box" placeholder="Search Itinerary" onkeyup="filterItineraries(this.value)">
+        <ul id="itinerary-list" class="itinerary-list"></ul>
+
+        <button onclick="location.href='index.html'" class="back-btn">Back to Homepage</button>
+    </div>
+    <!-- End of the itinerary container -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Botak Travel. All Rights Reserved.</p>
+    </footer>
+
+    <script src="itinerary.js"></script>
+</body>
+</html>

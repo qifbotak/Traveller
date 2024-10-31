@@ -1,0 +1,478 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Shared Navbar Styling */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent for readability */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ffdd57; /* Highlight color */
+}
+
+/* Index Page Styling */
+.index-page .background-container {
+    background-image: url('index-bg5.jpg'); /* Replace with the correct path if in a subfolder */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* Space for navbar */
+}
+
+.index-page .center-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.index-page .center-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Weather Page Background */
+.weather-page {
+    background-image: url('weather-bg.jpg'); /* Update the path if the file is in a different folder */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: keeps background fixed during scroll */
+    color: white; /* Ensures text is readable over the background */
+    min-height: 100vh;
+}
+
+/* Centered Transparent Container for Weather Page */
+.weather-page .weather-container {
+    max-width: 600px;
+    margin: 50px auto; /* Centers the container horizontally */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Weather Title */
+.weather-page .app-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Weather Search Section */
+.weather-page .search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.weather-page .input-box {
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #007bff;
+    width: 100%;
+    max-width: 300px;
+    transition: all 0.3s ease;
+}
+
+.weather-page .input-box:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.weather-page .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.weather-page .btn:hover {
+    background-color: #218838;
+}
+
+/* Weather Display Styling */
+.weather-page .weather-display {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.05); /* Light transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    width: 100%;
+}
+
+/* Styling Recent Locations */
+.weather-page .recent-locations {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #333;
+    width: 100%;
+}
+
+/* Loader Styling */
+.weather-page .loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+}
+
+/* Back Button */
+.weather-page .back-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #6f42c1;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.weather-page .back-btn:hover {
+    background-color: #563d7c;
+}
+
+/* Keyframes for Loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-links {
+    margin-top: 5px;
+}
+
+.footer-links a {
+    color: #ffdd57;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* Lighten on hover */
+}
+
+/* Centered Container for Itinerary Page */
+.itinerary-page .itinerary-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Itinerary Page Title */
+.itinerary-page .app-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input and Search Bars */
+.itinerary-page .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.itinerary-page .input-box, .itinerary-page .search-box, .itinerary-page .select-box {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px;
+    transition: all 0.3s ease;
+}
+
+.itinerary-page .input-box:focus, .itinerary-page .search-box:focus, .itinerary-page .select-box:focus {
+    outline: none;
+    border-color: #6f42c1;
+    box-shadow: 0 0 5px rgba(111, 66, 193, 0.3);
+}
+
+/* Add Button Styling */
+.itinerary-page .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.itinerary-page .btn:hover {
+    background-color:#218838;
+}
+
+/* Itinerary List */
+.itinerary-page .itinerary-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.itinerary-page .itinerary-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Itinerary Text */
+.itinerary-page .itinerary-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.itinerary-page .category-badge {
+    padding: 5px 10px;
+    background-color: #6f42c1;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Edit and Delete Buttons */
+.itinerary-page .edit-btn, .itinerary-page .delete-btn {
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+}
+
+/* Specific Styles for Edit Button */
+.itinerary-page .edit-btn {
+    background-color: #007bff; /* Blue color for Edit button */
+}
+
+.itinerary-page .edit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Specific Styles for Delete Button */
+.itinerary-page .delete-btn {
+    background-color: #dc3545; /* Red color for Delete button */
+}
+
+.itinerary-page .delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Back to Homepage Button */
+.itinerary-page .back-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #6f42c1;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.itinerary-page .back-btn:hover {
+    background-color: #563d7c;
+}
+
+/* Itinerary Page Background */
+.itinerary-page {
+    background-image: url('itinerary-bg.jpg'); /* Update the path if the file is in a different folder */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps background fixed during scroll */
+    color: white; /* Ensures text is readable over the background */
+    min-height: 100vh;
+}
+
+/* Transparent Container for Itinerary Page (Matching Weather Container) */
+.itinerary-page .itinerary-container {
+    max-width: 600px;
+    margin: 50px auto; /* Centers the container horizontally */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Edit and Delete Buttons */
+.itinerary-page .edit-btn, .itinerary-page .delete-btn {
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+}
+
+/* Specific Styles for Edit Button */
+.itinerary-page .edit-btn {
+    background-color: #007bff; /* Blue color for Edit button */
+}
+
+.itinerary-page .edit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Specific Styles for Delete Button */
+.itinerary-page .delete-btn {
+    background-color: #dc3545; /* Red color for Delete button */
+}
+
+.itinerary-page .delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Footer Styling */
+.itinerary-page footer {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+}
+
+.itinerary-page footer p {
+    margin: 0;
+}
+
+.itinerary-page footer-links {
+    margin-top: 5px;
+}
+
+.itinerary-page footer-links a {
+    color: #ffdd57;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.itinerary-page footer-links a:hover {
+    color: #ffffff; /* Lighten on hover */
+}

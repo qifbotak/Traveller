@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="weather-page">
+    <div class="weather-container">
+        <h1 class="app-title">Weather Information</h1>
+
+        <!-- Weather Search Section -->
+        <div class="weather-section">
+            <div class="search-container">
+                <input type="text" id="location" class="input-box" placeholder="Enter Location">
+                <button id="search" class="btn">Get Weather</button>
+            </div>
+
+            <!-- Display current weather details in a card -->
+            <div id="weather-info" class="weather-display card"></div>
+
+            <!-- Recent locations section -->
+            <div id="recent-locations" class="recent-locations"></div>
+
+            <div id="loader" class="loader" style="display:none;"></div>
+        </div>
+
+        <button onclick="location.href='index.html'" class="back-btn">Back to Homepage</button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2023 Botak Travel. All Rights Reserved.</p>
+    </footer>
+
+    <script src="weather.js"></script>
+</body>
+</html>
